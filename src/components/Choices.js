@@ -18,7 +18,7 @@ export default ({handleUserChoice}) => {
         <button className="paper" onClick={() => handleUserChoice(2)}>
           <Paper />
         </button>
-        <button className="paper" onClick={() => handleUserChoice(2)}>
+        <button className="scissors" onClick={() => handleUserChoice(2)}>
           <Scissors/>
         </button>
       </div>
