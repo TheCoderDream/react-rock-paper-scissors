@@ -1,5 +1,11 @@
 import React from 'react';
 
+const stateMessages = {
+    win: 'Congrats! You won!',
+    lose: 'Sorry! You lost!',
+    draw: 'You draw!'
+}
+
 export default ({state, userChoice, computerChoice, clicked}) => {
   return (
     <div 
@@ -8,9 +14,7 @@ export default ({state, userChoice, computerChoice, clicked}) => {
       <div>
         <div className="game-state-content">
           <p>{userChoice}</p>
-          { state === 'win' && <p>Congrats! You won!</p> }
-          { state === 'lose' && <p>Sorry! You lost!</p> }
-          { state === 'draw' && <p>Sorry! You lost!</p> }
+          <p>{stateMessages[state]}</p>
           <p>{computerChoice}</p>
         </div>
       </div>
